@@ -1,8 +1,12 @@
 <template>
   <div id="app">
-    <Header></Header>
-    <Aside></Aside>
-    <router-view/>
+    <div class="aside">
+      <Aside></Aside>
+    </div>
+    <div class="content">
+      <Header></Header>
+      <router-view/>
+    </div>
   </div>
 </template>
 
@@ -19,6 +23,14 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style>
+html,body{height: 100%;box-sizing: border-box;}
+#app{
+  height: 100%;
+}
+.aside{
+  width: 180px;
+  height: 100%;
+  float: left;
+}
 </style>
